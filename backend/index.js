@@ -1,11 +1,7 @@
 const express = require("express");
-
 const morgan = require("morgan");
-
 const cors = require("cors");
-
 const app = express(); // la constante app tendrá ahora todo el funcionamiento del servidor
-
 const { mongoose } = require("./database"); // no se quiere todo el archivo sino la conexión
 
 /** * Se crea una REST API, es la manera de decirle al servidor que reciba y envíe datos */
@@ -28,6 +24,5 @@ app.use("/api/empleados", require("./routes/empleado.routes"));
 
 app.listen(app.get("port"), () => {
     // esta es una mejor manera de configurar el puerto
-
     console.log("server activo en el puerto", app.get("port"));
 });
