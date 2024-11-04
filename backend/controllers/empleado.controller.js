@@ -7,8 +7,8 @@ empleadoControl.getEmpleados = async (req, res) => {
 };
 
 empleadoControl.createEmpleados = async (req, res) => {
-    const empleados = new Empleado(req.body);
-    await empleadoControl.save();
+    const empleado = new Empleado(req.body);
+    await empleado.save();
     res.json({
         status: "Empleado guardado",
     });
